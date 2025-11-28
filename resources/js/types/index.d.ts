@@ -1,3 +1,5 @@
+import { PaymentTypeEnum } from '@/enums/paymentType';
+
 export interface Auth {
     user: User;
 }
@@ -9,11 +11,12 @@ export type AppPageProps<T extends Record<string, unknown> = Record<string, unkn
 };
 
 export interface User {
-    id: number;
-    name: string;
-    email: string;
-    avatar?: string;
-    email_verified_at: string | null;
+    login: string;
+}
+
+export type Payment = {
+    amount: string;
+    payment_type: PaymentTypeEnum;
+    description: string;
     created_at: string;
-    updated_at: string;
 }
