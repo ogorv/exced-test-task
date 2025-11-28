@@ -1,8 +1,8 @@
 // Import our custom CSS
-import '../scss/styles.scss'
+import '../scss/styles.scss';
 
 // Import all of Bootstrap’s JS
-import 'bootstrap'
+import 'bootstrap';
 
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';

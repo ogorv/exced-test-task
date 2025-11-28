@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { Link } from '@inertiajs/vue3';
-import { defineProps } from 'vue';
 import { User } from '@/types';
-import { inject } from 'vue';
+import { Link } from '@inertiajs/vue3';
+import { defineProps, inject } from 'vue';
 
 interface Props {
     user: User;
@@ -28,7 +27,7 @@ const route = inject('route');
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-info w-100 p-3">
-            <span>Hello {{user.login}}</span>
+            <span>Hello {{ user.login }}</span>
         </div>
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">

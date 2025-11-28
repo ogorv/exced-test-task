@@ -21,9 +21,9 @@ defineProps({
             </tr>
         </thead>
         <tbody>
-        <tr v-for="(row, rowIndex) in items" :key="rowIndex">
-            <td v-for="(value, key) in row" :key="key">{{ value }}</td>
-        </tr>
+            <tr v-for="(row, rowIndex) in items" :key="rowIndex">
+                <td v-for="(value, key) in row" :key="key">{{ value }}</td>
+            </tr>
         </tbody>
     </table>
 </template>

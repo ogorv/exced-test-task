@@ -19,4 +19,4 @@ export type Payment = {
     payment_type: PaymentTypeEnum;
     description: string;
     created_at: string;
-}
+};

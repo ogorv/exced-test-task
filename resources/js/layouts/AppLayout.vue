@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SidebarMenu from '@/components/SidebarMenu.vue';
 import Navbar from '@/components/Navbar.vue';
+import SidebarMenu from '@/components/SidebarMenu.vue';
 import { User } from '@/types';
 import { defineProps } from 'vue';
 
@@ -23,4 +23,3 @@ defineProps<Props>();
         </div>
     </div>
 </template>
-

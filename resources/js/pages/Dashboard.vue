@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import Table from '@/components/Table.vue';
 import AppLayout from '@/layouts/AppLayout.vue';
+import { Payment, User } from '@/types';
 import { router } from '@inertiajs/vue3';
 import { defineProps, onMounted, onUnmounted } from 'vue';
-import { Payment, User } from '@/types';
-import Table from '@/components/Table.vue';
 
 interface Props {
     auth: {
