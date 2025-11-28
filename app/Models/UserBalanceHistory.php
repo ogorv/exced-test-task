@@ -4,15 +4,17 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use App\Casts\AsNumber;
 use App\Enums\PaymentTypeEnum;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 /**
  * @property ?Number $amount
  */
 class UserBalanceHistory extends Model
 {
+    use Searchable;
+
     /**
      * The table associated with the model.
      *
@@ -27,6 +29,20 @@ class UserBalanceHistory extends Model
      */
     protected $fillable = ['user_id', 'amount', 'payment_type', 'description'];
 
+
+    public function toSearchableArray(): array
+    {
+        return [
+            'description' => $this->description,
+        ];
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array<string, mixed>
+     */
+    //#[SearchUsingFullText(['description'])] Uncomment and add fulltext index for fulltext search
     /**
      * Get the attributes that should be cast.
      */
@@ -34,7 +50,8 @@ class UserBalanceHistory extends Model
     {
         return [
             'payment_type' => PaymentTypeEnum::class,
-            'amount'       => AsNumber::class,
+            'created_at'   => 'datetime:Y-m-d H:i:s',
         ];
     }
+
 }
