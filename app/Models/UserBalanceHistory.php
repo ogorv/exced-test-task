@@ -8,9 +8,6 @@ use App\Enums\PaymentTypeEnum;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
-/**
- * @property ?Number $amount
- */
 class UserBalanceHistory extends Model
 {
     use Searchable;
