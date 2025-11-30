@@ -5,12 +5,12 @@ Add user
 
 Deposit
 ```
-app:change-balance {login} {amount} deposit {description}
+ php artisan app:change-balance {login} {amount} deposit {description}
 ```
 
 Withdraw
 ```
-app:change-balance {login} {amount} withdraw {description}
+ php artisan app:change-balance {login} {amount} withdraw {description}
 ```
 
 Run the development server
